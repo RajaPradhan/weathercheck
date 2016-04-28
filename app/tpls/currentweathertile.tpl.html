@@ -1,0 +1,54 @@
+<div id="currentWeatherTile">
+	<div id="currentTempContainer">
+
+		<div id="tempInC" class="flipper">
+			<div class="topContainer">
+				<div class="weatherIconContainer">
+					<img src="images/{{currentWeatherData.weather[0].icon}}.png" />
+				</div> <!-- /.weatherIconContainer -->
+				
+				<div class="tempValue">
+					{{currentWeatherData.main.temp}}&deg;C
+				</div> <!-- /.tempValue -->
+			</div> <!-- /.topContainer -->
+			<div class="bottomContainer">
+				{{currentWeatherData.weather[0].description}}
+			</div>
+		</div><!-- /#tempInC -->
+		
+		<div id="tempInF" class="flipper">
+			<div class="topContainer">
+				<div class="weatherIconContainer">
+					<img src="images/{{currentWeatherData.weather[0].icon}}.png" />
+				</div> <!-- /.weatherIconContainer -->
+				
+				<div class="tempValue">
+					{{currentWeatherData.main.temp | celsiusToFahrenheit | roundTo: 2}}&deg;F
+				</div> <!-- /.tempValue -->
+			</div> <!-- /.topContainer -->
+			<div class="bottomContainer">
+				{{currentWeatherData.weather[0].description}}
+			</div>
+		</div><!-- /#tempInF -->
+	</div> <!-- /#currentTempContainer -->
+	
+	<div id="minMaxContainer">
+		<div id="minTempContainer">
+			<div id="minTempLabel">
+				Min
+			</div> <!-- /#minTempLabel -->
+			<div id="minTempValue">
+				{{currentWeatherData.main.temp_min}}&deg;C
+			</div> <!-- /#minTempValue -->
+		</div> <!-- /#minTempContainer -->
+		
+		<div id="maxTempContainer">
+			<div id="maxTempLabel">
+				Max
+			</div> <!-- /#maxTempLabel -->
+			<div id="maxTempValue">
+				{{currentWeatherData.main.temp_max}}&deg;C
+			</div> <!-- /#maxTempValue -->
+		</div> <!-- /#maxTempContainer -->
+	</div> <!-- /#minMaxContainer -->
+</div> <!-- /#currentWeatherTile -->

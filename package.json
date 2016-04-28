@@ -1,0 +1,16 @@
+{
+  "name": "weathercheck",
+  "version": "1.0.0",
+  "description": "An AngularJS mashup to check weather",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AngularJS",
+    "Web2.0",
+    "Mashup"
+  ],
+  "author": "Raja Pradhan <www.rajapradhan.com, rajapradhan08@gmail.com>",
+  "license": "MIT"
+}

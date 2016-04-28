@@ -1,0 +1,44 @@
+<div id="currentWeatherInfo">
+	<div id="currentWeatherInfoHeading">
+		Current weather info
+	</div> <!-- /#currentWeatherInfoHeading -->
+	
+	<div id="currentWeatherInfoTableContainer" class="table-responsive">
+		<table id="currentWeatherInfoTable" class="table">
+			<tbody>
+				<tr>
+					<td class="metricCol">City</td>
+					<td>{{currentWeatherAdditionalInfo.name}}</td>
+				</tr>
+				<tr>
+					<td class="metricCol">Country code</td>
+					<td>{{currentWeatherAdditionalInfo.sys.country}}</td>
+				</tr>
+				<tr>
+					<td class="metricCol">Latitude</td>
+					<td>{{currentWeatherAdditionalInfo.coord.lat}}</td>
+				</tr>
+				<tr>
+					<td class="metricCol">Longitude</td>
+					<td>{{currentWeatherAdditionalInfo.coord.lon}}</td>
+				</tr>
+				<tr>
+					<td class="metricCol">Humidity</td>
+					<td>{{currentWeatherAdditionalInfo.main.humidity}}%</td>
+				</tr>
+				<tr>
+					<td class="metricCol">Wind</td>
+					<td>{{currentWeatherAdditionalInfo.wind.speed}} meter/sec</td>
+				</tr>
+				<tr>
+					<td class="metricCol">Pressure</td>
+					<td class="tableBottomBorder">{{currentWeatherAdditionalInfo.main.pressure}}</td>
+				</tr>
+				<tr>
+					<td class="metricCol">Last updated</td>
+					<td class="tableBottomBorder">{{currentWeatherAdditionalInfo.dt | unixToLocalTime}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div> <!-- /#currentWeatherInfoTable -->
+</div> <!-- /#currentWeatherInfo -->

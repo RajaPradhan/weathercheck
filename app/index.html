@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html ng-app="WeatherCheckApp">
+	<head>
+		<meta charset="utf-8">
+		<title>WeatherCheck - AngularJS mashup to check weather</title>
+		
+		<link rel="stylesheet" href="../bower_components/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	
+	<body>
+		<header>
+			<div id="headerContainer">
+				<div class="container-fluid">
+					<div class="row">
+						<div id="navigationBar">
+							<div class="col-xs-10">
+								<div id="brandContainer">
+									<p id="brand"><img id="logo" src="images/logo.png" alt="logo">WeatherCheck</p>
+								</div> <!-- /#brandContainer -->
+							</div> <!-- /.col-xs-10 -->
+							<a id="forkGithub" href="#">
+								<img src="images/forkme_github.png" />
+							</a>
+							
+						</div> <!-- /#navigationBar -->
+					</div> <!-- /.row -->
+				</div> <!-- /.container-fluid - Navigation-->
+				
+				<div class="container-fluid">
+					<div class="row">
+						<div id="searchBar" ng-controller="CurrentWeatherCtrl">
+							<div class="col-xs-12 col-sm-10">
+								<input type="text" id="searchBox" enter-keypress="fetchWeatherData()" 
+									   placeholder="Enter city name to check it's weather E.g. Bangalore" ng-model="city"/>
+								<span id="searchGlass" ng-click="fetchWeatherData()">Check</span>
+							</div> <!-- /.col-sm-10 -->
+						</div> <!-- /#searchBar -->
+					</div> <!-- /.row -->
+				</div> <!-- /.container-fluid - Search -->
+			</div> <!-- /#headerContainer -->
+		</header>
+		
+		<section>
+			<div class="container-fluid">
+				<div class="row">
+					<div id="mainContent">
+						<div class="col-sm-3 columnContainer" ng-controller="CurrentWeatherRenderCtrl">
+							<current-weather-tile current-weather-data="currentWeather"></current-weather-tile>
+							
+							<current-weather-info current-weather-additional-info="currentWeather"></current-weather-info>
+						</div> <!-- /.col-sm-3 -->
+						
+						<div class="col-sm-9 columnContainer" ng-controller="DailyWeatherForecastRenderCtrl">
+							<div id="dailyWeatherForecastChart" 
+								 daily-forecast-data="dailyWeatherForecastData"
+								 daily-forecast-chart-type="dailyForecastChart">
+							</div> <!-- /#dailyWeatherForecastChart -->
+							
+							<div id="wholedayTemperature" 
+								 daily-forecast-data="dailyWeatherForecastData"
+								 daily-forecast-chart-type="wholedayTempChart">
+							</div> <!-- /#wholedayTemperature -->
+						</div> <!-- /.col-sm-9 -->
+						
+					</div> <!-- /#mainContent -->
+				</div> <!-- /.row -->
+			</div> <!-- /.container-fluid - Content -->
+		</section>
+	
+		<!-- Load all JS files-->
+		<script src="../bower_components/jquery/jquery.min.js"></script>
+		<script src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../bower_components/angular/angular.min.js"></script>
+		<script src="../bower_components/angular-route/angular-route.min.js"></script>
+		<script src="../bower_components/highcharts/highcharts.js"></script>
+		<script src="../bower_components/highcharts/highcharts-more.js"></script>
+		<script src="utils/utils.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/filters.js"></script>
+		<script src="js/directives.js"></script>
+	</body>
+</html>
