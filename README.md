@@ -1,5 +1,8 @@
 WeatherCheck - AngularJS mashup to check weather
 ================================================
+
+[alt atg](app/screenshots/desktop-view.png)
+
 This application is a Web 2.0 mashup developed using the following technologies:
 
 i) AngularJS
@@ -8,7 +11,7 @@ ii) Twitter Bootstrap
 
 iii) Highcharts
 
-The backend is powered by OpenWeatherMap API (http://openweathermap.org/);
+The backend is powered by OpenWeatherMap API (http://openweathermap.org/)
 
 The main intention of developing this application is to get a hands-on experience on the technologies mentioned above
 and at the same time building an application to have a quick info of the current weather in a city.
