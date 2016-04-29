@@ -1,7 +1,7 @@
 WeatherCheck - AngularJS mashup to check weather
 ================================================
 
-[alt atg](app/screenshots/desktop-view.png)
+![alt tag](app/screenshots/desktop-view.png)
 
 This application is a Web 2.0 mashup developed using the following technologies:
 
